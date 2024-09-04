@@ -1,0 +1,23 @@
+---
+services:
+  server:
+    image: ncdf-backend
+    build:
+      context: .
+      target: dev
+    ports:
+      - 127.0.0.1:${PORT:-8090}:${PORT:-8090}
+    volumes:
+      - ./:/usr/src/app
+
+
+
+
+
+
+
+
+
+# args:
+#   HOST_UID: ${HOST_UID:-1000}
+#   HOST_GID: ${HOST_GID:-1000}
